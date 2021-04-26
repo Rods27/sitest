@@ -1,0 +1,14 @@
+.header-container {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: $lightblue;
+  color: $white;
+  width: 100%;
+  border-bottom: 1.3px rgba(0, 0, 0, 0.3)solid;
+  z-index: 999999;
+  h1 {
+    font-size: 40px;
+  }
+}

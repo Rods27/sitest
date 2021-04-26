@@ -1,0 +1,124 @@
+.details-container {
+  .details-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    min-width: 900px;
+    margin: 200px auto;
+    .details {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 200px;
+      width: 280px;
+      background-color: $lightblue;
+      border: 1px rgba(0, 0, 0, 0.3)solid;
+      border-radius: 25px;
+      margin: 25px;
+      padding: 20px;
+      color: $darkWhite;
+    }
+    .edit {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 370px;
+      width: 300px;
+      background-color: $lightblue;
+      border: 1px rgba(0, 0, 0, 0.3)solid;
+      border-radius: 25px;
+      margin: 25px;
+      padding: 20px;
+      color: $darkWhite;
+      input {
+        width: 95%;
+        height: 29px;
+        transition: 0.1s;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        font-weight: 900;
+        color: $lightblue;
+        padding-left: 7px;
+        margin-top: 5px;
+        &:focus {
+          outline: none;
+          border-color: #9ecaed;
+          box-shadow: 0 0px 10px #9ecaed;
+        }
+        &:hover {
+          box-shadow: 0 0px 10px #9ecaed;
+        }
+      }
+      input[type="number"] {
+        height: 32px;
+        border-radius: 4px;
+        position: relative;
+        outline: none;
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20viewBox%3D%220%200%2050%2067%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%222%22%3E%3Cline%20x1%3D%221%22%20x2%3D%2250%22%20y1%3D%2233.5%22%20y2%3D%2233.5%22%20stroke%3D%22%23D8D8D8%22%2F%3E%3Cpolyline%20transform%3D%22translate(25%2020)%20rotate(45)%20translate(-25%20-20)%22%20points%3D%2219%2026%2019%2014%2032%2014%22%20stroke%3D%22%23000%22%2F%3E%3Cpolyline%20transform%3D%22translate(25%2045)%20rotate(225)%20translate(-25%20-45)%22%20points%3D%2219%2052%2019%2039%2032%2039%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+        background-position: center right;
+        background-size: contain;
+        background-repeat: no-repeat;
+        caret-color: transparent;
+      }
+      
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none !important;
+        opacity: 1 !important;
+        background: transparent !important;
+        border-width: 0px;
+        margin: 0;
+        border-left: 1px solid #d8d8d8;
+        height: 34px;
+        width: 23px;
+        cursor: pointer;
+      }
+
+      label {
+        span {
+          font-weight: 500;
+          color: #FFFFFF;
+        }
+      }
+      .button-div {
+        width: 100%;
+        height: 20px;
+        text-align: center;
+        button {
+          position: absolute;
+          color: $lightblue;
+          width: 110px;
+          height: 38px;
+          font-size: 20px;
+          font-weight: 900;
+          margin-bottom: 20px;
+          border-radius: 7px;
+          border: none;
+          transition: 0.3s;
+          &:hover {
+            transition: 0.3s;
+            box-shadow: 0 0px 10px #9ecaed;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        #edit {
+          left: 52px;
+          bottom: -7px;
+        }
+        #create {
+          right: 52px;
+          bottom: -7px;
+        }
+        #create-create {
+          right: 110px;
+          bottom: -7px;
+        }
+      }
+    }
+  }
+}

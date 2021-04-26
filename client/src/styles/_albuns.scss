@@ -1,0 +1,77 @@
+.albuns-container {
+  .albuns-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    min-width: 900px;
+    margin: 200px auto;
+    .album {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 175px;
+      width: 220px;
+      background-color: $lightblue;
+      border: 1px rgba(0, 0, 0, 0.3)solid;
+      border-radius: 25px;
+      margin: 25px;
+      padding: 20px;
+      color: $darkWhite;
+      .minor-info {
+        font-weight: 500;
+        font-size: 15px;
+      }
+      .edit {
+        position: absolute;
+        right: 7px;
+        font-size: 20px;
+        bottom: 15px;
+        padding: 5px;
+        border-radius: 5px;
+        &:hover {
+          background-color: $darkWhite;
+          color: $lightblue;
+          opacity: 0.95;
+          transition: all 0.1s ease-in-out;
+        }
+      }
+      .delete {
+        position: absolute;
+        right: 7px;
+        font-size: 22px;
+        bottom: 55px;
+        padding: 5px;
+        border-radius: 5px;
+        &:hover {
+          background-color: $darkWhite;
+          color: $lightblue;
+          opacity: 0.95;
+          transition: all 0.1s ease-in-out;
+        }
+      }
+    }
+    .create-div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 200px;
+      width: 200px;
+      background-color: $lightblue;
+      border: 1px rgba(0, 0, 0, 0.3)solid;
+      border-radius: 25px;
+      margin: 25px;
+      padding: 20px;
+      color: $darkWhite;
+      i {
+        font-size: 80px;
+      }
+      &:hover {
+        opacity: 0.85;
+        transition: all 0.2s;
+      }
+    }
+  }
+}
