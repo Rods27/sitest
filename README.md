@@ -4,42 +4,32 @@ Um website para cadastro de albuns de música.
 ## Indice
 * [Screenshots](#screenshots)
 * [Tecnologias](#tecnologias)
-* [IBM Cloud](#ibm-cloud)
 * [Instalação](#instalação)
 * [Configuração](#configuração)
 * [FeedBack](#feedback)
 
 ## Screenshots
 
-<img align="left" src="client/public/images/1.png" width="200" />
+<img src="client/public/images/1.png" width="500" />
 
-<img align="left" src="client/public/images/2.png" width="200" />
+<img src="client/public/images/2.png" width="500" />
 
-<img src="client/public/images/3.png" width="200" />
+<img src="client/public/images/3.png" width="500" />
 
-<img src="client/public/images/4.png" width="200" />
+<img src="client/public/images/4.png" width="500" />
 
-<img src="client/public/images/5.png" width="200" />
+<img src="client/public/images/5.png" width="500" />
 
-<img src="client/public/images/6.png" width="200" />
+<img src="client/public/images/6.png" width="500" />
 
 
 ## Tecnologias
 <ul>
   <li><a href="https://nodejs.org/en/">Node.js</a></li>
   <li><a href="https://www.mysql.com/">MySQL</a></li>
-  <li><a href="https://www.ibm.com/br-pt/cloud/watson-text-to-speech">IBM Watson - Text to Speech</a></li>
   <li><a href="https://reactjs.org">React</a></li>
   <li><a href="https://sass-lang.com/">Sass</a></li>
 </ul>
-
-## IBM Cloud
-#### Criando conta na IBM Cloud
-1. Acesse a [IBM Cloud](https://cloud.ibm.com/login) faça seu login ou [crie sua conta](https://cloud.ibm.com/registration).
-2. Na barra de Pesquisa, pesquise por **Text to Speech**.
-	- Na aba **Criar**, selecione seu plano.
-	- Ao lado direito, no painel, clique em **Criar**, caso já tenha uma instância, vá clique em **visualize uma existente**
-	- Será rediredionado a pagina que tem suas credênciais, onde será usada mais a baixo na [configuração](#configurando-o-text-to-speech).
 
 ## Instalação
 Assim que tiver clonado o repositório, usando o terminal do [vscode](https://code.visualstudio.com/) ou o terminal do seu sistema operacional, abra-o na pasta server.
@@ -54,17 +44,47 @@ Certifique-se que tem instalado o [Node](#tecnologias) e o [MySql](#tecnologias)
 ## Configuração
 
 #### Criando o Database
-- Assim que tiver tudo instalado, installe e abra o [MySQLWorkBench](https://www.mysql.com/products/workbench/), entre no seu servidor local, abra uma nova query e digite: 
+- Assim que tiver tudo instalado, installe e abra o [MySQLWorkBench](https://www.mysql.com/products/workbench/), abra a pasta server, encontre o arquivo script.sql, copie e o execute no MySQLWorkBench.
 ```
 CREATE DATABASE IF NOT EXISTS Smarkio_DB;
 ```
 depois:
 ```
-CREATE TABLE Smarkio_DB.commentaries (
-	id INT unsigned NOT NULL auto_increment,
-    comment varchar(200) NOT NULL,
-    CONSTRAINT pk_commentaries PRIMARY KEY (id)
+DROP DATABASE IF EXISTS sitest;
+CREATE DATABASE IF NOT EXISTS sitest;
+
+USE sitest;
+
+CREATE TABLE IF NOT EXISTS accounts (
+	id INT NOT NULL AUTO_INCREMENT,
+    name varchar(20) NOT NULL,
+    username VARCHAR(10) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY `username` (username)
 );
+
+CREATE TABLE IF NOT EXISTS albuns (
+	id INT NOT NULL AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    album_name VARCHAR(20) NOT NULL,
+    artist VARCHAR(30) NOT NULL,
+    year INT(4) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    duration INT(5),
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES accounts(id)
+    UNIQUE KEY `album_name` (name)
+);
+
+INSERT INTO accounts (id, name, username, password) VALUES
+    ('1', 'Administrator', 'username', '123456')
+
+INSERT INTO albuns (id, user_id, album_name, artist, year, gender, duration) VALUES
+('1', '1', 'NINE', 'Blink 182', '2019', 'Pop Punk', '41')
+
+INSERT INTO albuns (id, user_id, album_name, artist, year, gender, duration) VALUES
+('2', '2', 'Days go By', 'The OffSpring', '2012', 'Punk Rock', '42')
 ```
 E o banco de dados estará criado.
 
