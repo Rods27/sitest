@@ -11,6 +11,9 @@ class Header extends React.Component {
     if (history.location.pathname !== '/') {
       document.getElementsByTagName('h1')[0].innerText = 'Albuns - Editar';
     }
+    if (history.location.pathname === '/create') {
+      document.getElementsByTagName('h1')[0].innerText = 'Criar novo album';
+    }
     if (history.location.pathname === '/register') {
       document.getElementsByTagName('h1')[0].innerText = 'Register';
     }
