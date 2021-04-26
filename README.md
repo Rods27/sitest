@@ -11,19 +11,17 @@ Um website para cadastro de albuns de música.
 
 ## Screenshots
 
-<img align="left" src="client/public/images/app-image-1.png" width="450" />
+<img align="left" src="client/public/images/1.png" width="200" />
 
-<img src="client/public/images/app-image-2.png" width="450" />
+<img align="left" src="client/public/images/2.png" width="200" />
 
-<img src="client/public/images/app-image-3.png" width="450" />
+<img src="client/public/images/3.png" width="200" />
 
-<img src="client/public/images/app-image-4.png" width="450" />
+<img src="client/public/images/4.png" width="200" />
 
-<img src="client/public/images/app-image-5.png" width="450" />
+<img src="client/public/images/5.png" width="200" />
 
-<img src="client/public/images/app-image-6.png" width="450" />
-
-<br>Link da pasta das imagens <a href="https://github.com/Rods27/sitest/client/public">aqui.</a>
+<img src="client/public/images/6.png" width="200" />
 
 
 ## Tecnologias
