@@ -45,10 +45,7 @@ Certifique-se que tem instalado o [Node](#tecnologias) e o [MySql](#tecnologias)
 
 #### Criando o Database
 - Assim que tiver tudo instalado, installe e abra o [MySQLWorkBench](https://www.mysql.com/products/workbench/), abra a pasta server, encontre o arquivo script.sql, copie e o execute no MySQLWorkBench.
-```
-CREATE DATABASE IF NOT EXISTS Smarkio_DB;
-```
-depois:
+Ou copie:
 ```
 DROP DATABASE IF EXISTS sitest;
 CREATE DATABASE IF NOT EXISTS sitest;
