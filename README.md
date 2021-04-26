@@ -92,26 +92,11 @@ module.exports = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: '123',
-  database: 'Smarkio_DB',
+  database: 'sitest',
   port: '3306',
 })
 ```
-#### Configurando o Text to Speech
-Vá na pasta ```server/models/commentModel.js```.
-```
-//Text to Speech
-const textToSpeech = new TextToSpeech({
-  authenticator: new IamAuthenticator({ apikey: ''}),
-  serviceUrl: '',
-  disableSslVerification: true,
-});
-```
-Coloque a sua chave fornecida pela IBM em ```apikey: ''```, e sua Url fornecida pela IBM em ```serviceUrl: ''```, para autenticação do microserviço.
-Caso não tenha, volta pra sessão da [IBM Cloud](#criando-conta-na-ibm-cloud).
-
-#### Iniciando a aplicação
-- Vá na pasta server e digite ```npm run dev```, para abrir o servidor, na porta 3000.
-- Vá na pasta client e digite ```npm start```, para iniciar a aplicação no browser, na porta 3001.
+Veja qual a sua senha e se irá mudar o nome do banco de dados, se não, só copie e mude a senha.
 
 ## Feedback 
 
