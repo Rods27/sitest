@@ -98,6 +98,10 @@ module.exports = mysql.createPool({
 ```
 Veja qual a sua senha e se irá mudar o nome do banco de dados, se não, só copie e mude a senha.
 
+#### Iniciando a aplicação
+- Vá na pasta client, abra o terminal e digite ```npm start```, para iniciar a aplicação no browser, na porta 3000.
+- Vá na pasta server, abra o terminal e digite ```npm run dev```, para iniciar a aplicação no browser, na porta 3000.
+
 ## Feedback 
 
 Ficarei bem agradecido caso queira me dar um feedback costrutivo, caso queira meus contatos estarão abaixo!
