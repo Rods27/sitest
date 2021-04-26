@@ -23,7 +23,7 @@ Um website para cadastro de albuns de música.
 
 <img src="client/public/images/app-image-6.png" width="450" />
 
-<br>Link da pasta das imagens <a href="https://github.com/Rods27/sitest/tree/main/client/public">aqui.</a>
+<br>Link da pasta das imagens <a href="https://github.com/Rods27/sitest/client/public">aqui.</a>
 
 
 ## Tecnologias
